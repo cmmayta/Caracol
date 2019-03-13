@@ -1,0 +1,21 @@
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>CaracolWeb</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:panelGrid columns="2">
+                <p:outputLabel value="Altura"/><p:inputText value="#{caracolControl.altura}" required="true" />
+                <p:outputLabel value="Sube"/><p:inputText value="#{caracolControl.sube}" />
+                <p:outputLabel value="Baja"/><p:inputText value="#{caracolControl.baja}" />
+                <p:commandButton value="Calcular" update="rpta" action="#{caracolControl.calcular()}" />
+                <p:inputTextarea id="rpta" value="#{caracolControl.rpta}" rows="3" cols="30" />
+            </p:panelGrid>
+        </h:form>            
+    </h:body>
+</html>
